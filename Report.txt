@@ -1,0 +1,250 @@
+Esercizio1.1
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd documenti
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ cat appunti_reti.txt
+Lezione 1 - Modello OSI
+
+Il modello OSI (Open Systems Interconnection) è composto da 7 livelli:
+
+1. Fisico - trasmissione dei bit sul mezzo fisico
+2. Data Link - gestione dei frame e accesso al mezzo
+3. Rete - instradamento dei pacchetti (IP)
+4. Trasporto - comunicazione end-to-end (TCP, UDP)
+5. Sessione - gestione delle sessioni di comunicazione
+6. Presentazione - codifica e crittografia dei dati
+7. Applicazione - interfaccia con l'utente (HTTP, FTP, SMTP)
+
+Il modello TCP/IP semplifica questi livelli in 4:
+- Accesso alla rete (livelli 1-2)
+- Internet (livello 3)
+- Trasporto (livello 4)
+- Applicazione (livelli 5-7)
+
+Ogni livello comunica solo con il livello adiacente.
+Il principio di incapsulamento prevede che ogni livello aggiunga un header ai dati.
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ head -n 3 appunti_sicurezza.txt
+Sicurezza Informatica - Concetti Base
+
+La triade CIA:
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ tail -n 5 todo.txt
+
+Scadenze:
+- Backend: 15 marzo
+- Frontend: 30 marzo
+- Consegna finale: 15 aprile
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ 
+
+Esercizio1.2
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd log
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ head -n5 server.log
+2024-01-15 08:00:01 [INFO] Server avviato sulla porta 8080
+2024-01-15 08:00:02 [INFO] Connessione al database stabilita
+2024-01-15 08:05:15 [INFO] Richiesta GET /index.html - 200 OK
+2024-01-15 08:05:16 [INFO] Richiesta GET /style.css - 200 OK
+2024-01-15 08:10:30 [WARNING] Tentativo di accesso non autorizzato da 192.168.1.100
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ tail -n 3 server.log
+2024-01-15 10:00:00 [INFO] Server in fase di arresto
+2024-01-15 10:00:01 [INFO] Connessione al database chiusa
+2024-01-15 10:00:02 [INFO] Server arrestato correttamente
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ less accessi.log
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ 
+
+Esercizio2.1
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd documenti
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ cp appunti_reti.txt appunti_reti_backup.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ cp todo.txt ../backup/
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ ls
+appunti_database.txt  appunti_reti_backup.txt  todo.txt
+appunti_reti.txt      appunti_sicurezza.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ ls ../backup/
+todo.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ 
+
+Esercizio2.2
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cp -r progetti/ backup/progetti
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ ls backup/
+progetti  todo.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ ls backup/progetti/
+mobile  webapp
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ ls backup/progetti/webapp/
+app.js  index.html  style.css
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ 
+
+Esercizio3.1
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd documenti
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ mv todo.txt attivita.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ ls
+appunti_database.txt  appunti_reti_backup.txt  attivita.txt
+appunti_reti.txt      appunti_sicurezza.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ mv attivita.txt ../archivio/
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ ls
+appunti_database.txt  appunti_reti.txt  appunti_reti_backup.txt  appunti_sicurezza.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ ls ../archivio/
+attivita.txt            documento_marzo.pdf   note.txt
+budget_2023.xlsx        foto_milano_2023.jpg  presentazione.pptx
+budget_2024.xlsx        foto_napoli_2024.jpg  readme.md
+documento_febbraio.pdf  foto_roma_2023.jpg    relazione_finale.docx
+documento_gennaio.pdf   foto_roma_2024.jpg    relazione_intermedia.docx
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/documenti (main) $ 
+
+Esercizio3.2
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd progetti
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/progetti (main) $ cd we
+bapp
+@DaniloDegiglio-22 ➜ .../lezione-bash02a-de-giglio/esercizi/progetti/webapp (main) $ mv app.js main.js
+@DaniloDegiglio-22 ➜ .../lezione-bash02a-de-giglio/esercizi/progetti/webapp (main) $ mv style.css ../../backup/style_old.css
+@DaniloDegiglio-22 ➜ .../lezione-bash02a-de-giglio/esercizi/progetti/webapp (main) $ ls
+index.html  main.js
+@DaniloDegiglio-22 ➜ .../lezione-bash02a-de-giglio/esercizi/progetti/webapp (main) $ ls ../../backup/
+progetti  style_old.css  todo.txt
+@DaniloDegiglio-22 ➜ .../lezione-bash02a-de-giglio/esercizi/progetti/webapp (main) $ 
+
+Esercizio4.1
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd archivio
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ rm note.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ rm -i
+ readme.md
+rm: remove regular empty file 'readme.md'? y
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls
+attivita.txt            documento_marzo.pdf   presentazione.pptx
+budget_2023.xlsx        foto_milano_2023.jpg  relazione_finale.docx
+budget_2024.xlsx        foto_napoli_2024.jpg  relazione_intermedia.docx
+documento_febbraio.pdf  foto_roma_2023.jpg
+documento_gennaio.pdf   foto_roma_2024.jpg
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ 
+
+Esercizio4.2
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ mkdir temp
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ touch temp/a.txt temp/b.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ rm -r temp
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ ls
+archivio  backup  documenti  log  progetti  sandbox
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ 
+
+Esercizio5.1
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd archivio
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $  ls *.jpg
+foto_milano_2023.jpg  foto_napoli_2024.jpg  foto_roma_2023.jpg  foto_roma_2024.jpg
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls *.pdf
+documento_febbraio.pdf  documento_gennaio.pdf  documento_marzo.pdf
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls *2024*
+budget_2024.xlsx  foto_napoli_2024.jpg  foto_roma_2024.jpg
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ 
+
+Esercizio5.2
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd archivio
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ cp *.jpg ../backup/
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls ../backup/
+foto_milano_2023.jpg  foto_roma_2023.jpg  progetti       todo.txt
+foto_napoli_2024.jpg  foto_roma_2024.jpg  style_old.css
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls relazione*
+relazione_finale.docx  relazione_intermedia.docx
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls *.xlsx *.docx
+budget_2023.xlsx  budget_2024.xlsx  relazione_finale.docx  relazione_intermedia.docx
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ 
+
+Esercizio5.3
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd archivio
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls foto_roma*
+foto_roma_2023.jpg  foto_roma_2024.jpg
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls budget_202[34].xlsx
+budget_2023.xlsx  budget_2024.xlsx
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls documento_???????.pdf
+documento_gennaio.pdf
+
+Esercizio6.1
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd sandbox
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/sandbox (main) $ echo "mela" > frutti.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/sandbox (main) $ echo "banana" >> frutti.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/sandbox (main) $ echo "arancia" >> frutti.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/sandbox (main) $ cat frutti.txt
+mela
+banana
+arancia
+
+Esercizio6.2
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd archivio
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls *.jpg > ../sandbox/elenco_foto.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ ls *.pdf >> ../sandbox/elenco_foto.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/archivio (main) $ cat ../sandbox/elenco_foto.txt
+foto_milano_2023.jpg
+foto_napoli_2024.jpg
+foto_roma_2023.jpg
+foto_roma_2024.jpg
+documento_febbraio.pdf
+documento_gennaio.pdf
+documento_marzo.pdf
+
+Esercizio6.3
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd log
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ head -n 5 server.log > ../sandbox/log_estratto.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ tail -n 3 server.log >> ../sandbox/log_estratto.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat ../sandbox/log_estratto.txt
+2024-01-15 08:00:01 [INFO] Server avviato sulla porta 8080
+2024-01-15 08:00:02 [INFO] Connessione al database stabilita
+2024-01-15 08:05:15 [INFO] Richiesta GET /index.html - 200 OK
+2024-01-15 08:05:16 [INFO] Richiesta GET /style.css - 200 OK
+2024-01-15 08:10:30 [WARNING] Tentativo di accesso non autorizzato da 192.168.1.100
+2024-01-15 10:00:00 [INFO] Server in fase di arresto
+2024-01-15 10:00:01 [INFO] Connessione al database chiusa
+2024-01-15 10:00:02 [INFO] Server arrestato correttamente
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ 
+
+Esercizio7.1
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd log
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat server.log | grep "ERROR"
+2024-01-15 08:20:45 [ERROR] Connessione al database persa
+2024-01-15 08:20:46 [ERROR] Timeout nella riconnessione al database
+2024-01-15 08:45:10 [ERROR] File non trovato: /images/logo.png - 404
+2024-01-15 09:45:00 [ERROR] Impossibile inviare email di notifica
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat server.log | grep "WARNING" | wc -l
+4
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat server.log | grep "INFO" > ../sandbox/solo_info.txt
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat ../sandbox/solo_info.txt
+2024-01-15 08:00:01 [INFO] Server avviato sulla porta 8080
+2024-01-15 08:00:02 [INFO] Connessione al database stabilita
+2024-01-15 08:05:15 [INFO] Richiesta GET /index.html - 200 OK
+2024-01-15 08:05:16 [INFO] Richiesta GET /style.css - 200 OK
+2024-01-15 08:15:00 [INFO] Richiesta POST /api/login - 200 OK
+2024-01-15 08:20:50 [INFO] Riconnessione al database riuscita
+2024-01-15 08:30:00 [INFO] Richiesta GET /api/studenti - 200 OK
+2024-01-15 08:40:00 [INFO] Richiesta PUT /api/studenti/15 - 200 OK
+2024-01-15 08:50:00 [INFO] Backup automatico completato
+2024-01-15 09:00:00 [INFO] Richiesta GET /api/classi - 200 OK
+2024-01-15 09:30:00 [INFO] Pulizia cache completata
+2024-01-15 10:00:00 [INFO] Server in fase di arresto
+2024-01-15 10:00:01 [INFO] Connessione al database chiusa
+2024-01-15 10:00:02 [INFO] Server arrestato correttamente
+
+Esercizio7.2
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio (main) $ cd esercizi
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi (main) $ cd log
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat accessi.log | grep "fallito"
+2024-01-15 08:10:30 admin login fallito 192.168.1.100
+2024-01-15 08:10:31 admin login fallito 192.168.1.100
+2024-01-15 08:35:00 guest login fallito 192.168.1.50
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat accessi.log | grep "successo" | wc -l
+5
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ cat accessi.log | grep "login" | awk '{print $3}' | sort | uniq
+admin
+anna.verdi
+guest
+luca.bianchi
+mario.rossi
+sara.neri
+@DaniloDegiglio-22 ➜ /workspaces/lezione-bash02a-de-giglio/esercizi/log (main) $ 
+
+Esercizio7.3
